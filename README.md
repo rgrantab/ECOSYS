@@ -52,8 +52,11 @@ will push your branch to remote for the first time.
 * You can also create a new branch using the github web tools.
 
 * Enter
+
   git add files_you_changed
+
 will add the "files_you_changed" to the tracking list.
+
 
 * Enter
   git commit
