@@ -16,7 +16,7 @@ C
       CHARACTER*80 BUF,PREFIX
       CALL GETCWD(BUF)
 C
-C     IDENTIFY OPERATING SYSTEM: DOS OR UNIX
+CC     IDENTIFY OPERATING SYSTEM: DOS OR UNIX
 C
       IF((.NOT.(BUF(1:1).EQ.'/'.OR.BUF(1:1).EQ.'~'))
      2.AND.BUF(2:2).EQ.':')THEN
@@ -25,13 +25,13 @@ C
       CALL GETARG(2,BUF)
       CALL CHDIR(BUF)
       PREFIX='.\\'
-C     make output directory     
-      outdir=trim(buf)//'\\outputs\\' 
+C     make output directory
+      outdir=trim(buf)//'\\outputs\\'
       ELSE
       PREFIX='./'
-C     make output directory     
-      outdir=trim(buf)//'/outputs/' 
-      ENDIF 
+C     make output directory
+      outdir=trim(buf)//'/outputs/'
+      ENDIF
       call system('mkdir -p '//trim(outdir))
 C
 C     READ INPUT FILES
